@@ -1,0 +1,12 @@
+.button {
+  width: 12em;
+}
+
+.icon {
+  width: 96px;
+  height: 96px;
+}
+
+.icon ~ span {
+  color: black;
+}

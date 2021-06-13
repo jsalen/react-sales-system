@@ -1,0 +1,9 @@
+.landing {
+  height: calc(100vh - 56px);
+}
+
+.landing__title {
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
