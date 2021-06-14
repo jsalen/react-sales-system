@@ -43,14 +43,38 @@ export default class InventoryList extends Component {
     });
 
     if (alert) {
-      axios.delete("http://localhost:4000/api/products/" + id);
+      await axios.delete("http://localhost:4000/api/products/" + id);
     }
   };
 
   handleAdd = async (id) => {
-    const product = await this.getProduct(id);
-    console.log(product);
+    await this.getProduct(id);
+    const oldQuantity = this.state.selectedProduct.quantity;	
+    console.log(oldQuantity)
+    const getNewValue = await this.swalAddProduct();
+	  console.log(getNewValue)
+   // const update = product.quantity + getNewValue;
+    //const addedNewValue = { "quantity": update };
+    //if(getNewValue !== null)
+      //await axios.update("http://localhost:4000/api/products" + id, addedNewValue)
   };
+
+  swalAddProduct = () => {
+    swal({
+      text: "¿Cuántas unidades deseas añadir?",
+      content: "input",
+      buttons: {
+        cancel: "Cerrar",
+	confirm: "Aceptar",
+      },
+    })
+    .then(value => {
+      if (!value) throw null;
+
+      return value;
+	    console.log(value)
+    })
+  }
 
   render() {
     return (
