@@ -11,7 +11,7 @@ export default function Navigation() {
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav>
-            <NavDropdown title="Menú" menuVariant="dark">
+            <NavDropdown title="Menú" menuvariant="dark">
               <NavDropdown.Item href="/shopping-car">Vender</NavDropdown.Item>
               <NavDropdown.Item href="/reports">Reportes</NavDropdown.Item>
               <NavDropdown.Item href="/close-cashier">

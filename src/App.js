@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/styles/globals.css";
-
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation/Navigation";
@@ -18,7 +18,8 @@ function App() {
       <Route path="/shopping-car" component={ShoppingCar} />
       <Route path="/admin" component={Admin} />
       <Route path="/inventory" component={Inventory} />
-      <Route path="/AddProduct" component={AddProduct} />
+      <Route path="/editProduct/:id" component={AddProduct} />
+      <Route path="/addProduct" component={AddProduct} />
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Table, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import format from "../../libs/formatCurrency";
 import swal from "@sweetalert/with-react";
 const URL = "http://localhost:4000/api/products/";
@@ -12,10 +12,6 @@ export default class InventoryList extends Component {
   };
 
   componentDidMount() {
-    this.getProducts();
-  }
-
-  componentDidUpdate() {
     this.getProducts();
   }
 
@@ -45,36 +41,8 @@ export default class InventoryList extends Component {
     if (alert) {
       await axios.delete("http://localhost:4000/api/products/" + id);
     }
+    this.getProducts();
   };
-
-  handleAdd = async (id) => {
-    await this.getProduct(id);
-    const oldQuantity = this.state.selectedProduct.quantity;	
-    console.log(oldQuantity)
-    const getNewValue = await this.swalAddProduct();
-	  console.log(getNewValue)
-   // const update = product.quantity + getNewValue;
-    //const addedNewValue = { "quantity": update };
-    //if(getNewValue !== null)
-      //await axios.update("http://localhost:4000/api/products" + id, addedNewValue)
-  };
-
-  swalAddProduct = () => {
-    swal({
-      text: "¿Cuántas unidades deseas añadir?",
-      content: "input",
-      buttons: {
-        cancel: "Cerrar",
-	confirm: "Aceptar",
-      },
-    })
-    .then(value => {
-      if (!value) throw null;
-
-      return value;
-	    console.log(value)
-    })
-  }
 
   render() {
     return (
@@ -88,11 +56,8 @@ export default class InventoryList extends Component {
               <Button
                 variant="primary"
                 size="sm"
-                onClick={() => this.handleAdd(product._id)}
+                href={"/editProduct/" + product._id}
               >
-                Añadir
-              </Button>
-              <Button variant="success" size="sm">
                 Editar
               </Button>
               <Button

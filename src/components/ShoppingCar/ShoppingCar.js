@@ -24,7 +24,7 @@ export default class ShoppingCar extends Component {
             <PurchaseList addItems={this.state.items} />
           </Col>
           <Col>
-            <ProductList handleClick={this.addToList} />
+            <ProductList />
           </Col>
         </Row>
       </React.Fragment>
