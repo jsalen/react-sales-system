@@ -5,15 +5,15 @@ import { Container, Button, Table } from "react-bootstrap";
 
 export default function Inventory() {
   return (
-    <Container className="mt-4 text-center">
+    <Container className="mt-4 text-center inventory-container">
       <h1>Administración de inventario</h1>
       <Button variant="primary" className="mb-4">
         <Link to="/addProduct" className="button">
           Nuevo Producto
         </Link>
       </Button>
-      <Table striped bordered hover>
-        <thead>
+      <Table striped bordered hover className="inventory-table">
+        <thead className="thead-dark">
           <tr>
             <th>Producto</th>
             <th>Cantidad</th>

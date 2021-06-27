@@ -1,11 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/styles/globals.css";
+
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation/Navigation";
 import Landing from "./pages/Landing";
-import ShoppingCar from "./components/ShoppingCar/ShoppingCar";
+import ShoppingCar from "./pages/ShoppingCar";
 import Admin from "./pages/Admin";
 import Inventory from "./pages/Inventory";
 import AddProduct from "./pages/AddProduct";

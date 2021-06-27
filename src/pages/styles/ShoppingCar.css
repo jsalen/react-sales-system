@@ -1,0 +1,9 @@
+.sales {
+  height: calc(100vh - 168px);
+  max-height: calc(100vh - 168px);
+}
+
+.sales__list {
+  max-height: calc(100vh - 168px);
+  overflow: auto;
+}
