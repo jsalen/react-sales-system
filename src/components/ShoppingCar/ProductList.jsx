@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
-import { getProducts } from "../../services/products";
 import { formatCurrency } from "../../libs/helpers";
+import { useFetch } from "../hooks/useFetch";
 
 export default function ProductList({ setCart, cart }) {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    try {
-      getProducts().then((data) => setProducts(data));
-      setLoading(false);
-    } catch (error) {
-      console.error("error", error);
-    }
-  }, []);
+  let { data, isPending, error } = useFetch();
 
   const addToCart = (product) => {
     let newCart = [...cart, { ...product }];
@@ -25,8 +16,9 @@ export default function ProductList({ setCart, cart }) {
     <React.Fragment>
       <SearchBar />
       <ListGroup className="mt-2" variant="flush">
-        {loading && <h3>Loading...</h3>}
-        {products.map((product) => (
+        {isPending && <h3>Loading...</h3>}
+        {error && <h3>Hubo un problema...</h3>}
+        {data.map((product) => (
           <ListGroup.Item
             className="product"
             key={product._id}

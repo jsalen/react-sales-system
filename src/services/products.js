@@ -4,9 +4,9 @@ const URI = "http://localhost:4000/api/products/";
 export const getProducts = async () => {
   try {
     const res = await axios.get(URI);
-    return res.data;
+    return res;
   } catch (error) {
-    return "Error";
+    return error;
   }
 };
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
-import swal from "sweetalert";
-import { formatCurrency } from "../../libs/helpers";
+import { formatCurrency, confirmDeletion } from "../../libs/helpers";
 
 import { getProducts, deleteProduct } from "../../services/products";
 
@@ -13,7 +12,7 @@ export default function InventoryList() {
     try {
       getProducts().then((data) => {
         if (isRendered) {
-          setProducts(data);
+          setProducts(data.data);
         }
         return null;
       });
@@ -26,16 +25,9 @@ export default function InventoryList() {
   }, [products]);
 
   const handleDelete = async (id) => {
-    const alert = await swal({
-      text: "¿Estás seguro que deseas borrar este elemento?",
-      buttons: {
-        cancel: "Cerrar",
-        confirm: "Eliminar",
-      },
-      icon: "warning",
-    });
+    const confirmation = await confirmDeletion();
 
-    if (alert) {
+    if (confirmation) {
       await deleteProduct(id);
     }
   };
