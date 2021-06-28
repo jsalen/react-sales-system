@@ -9,7 +9,6 @@ export default function InventoryList() {
 
   let isRendered = useRef(true);
   useEffect(() => {
-    console.log("mounted");
     try {
       getProducts().then((data) => {
         if (isRendered) {

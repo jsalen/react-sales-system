@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewProductForm from "../components/Inventory/NewProductForm";
+import NewProductForm from "../components/Inventory/NewProductForm.jsx";
 import { Container, Row } from "react-bootstrap";
 import axios from "axios";
 import swal from "sweetalert";
@@ -39,7 +39,6 @@ export default class AddProduct extends Component {
     e.preventDefault();
 
     const { _id, product, quantity, price } = this.state.form;
-    console.log(this.state.form);
     const newProduct = {
       _id,
       product,
