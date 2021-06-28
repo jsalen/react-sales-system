@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
 import { getProducts } from "../../services/products";
-import format from "../../libs/formatCurrency";
+import { formatCurrency } from "../../libs/helpers";
 
 export default function ProductList({ setCart, cart }) {
   const [products, setProducts] = useState([]);
@@ -35,7 +35,7 @@ export default function ProductList({ setCart, cart }) {
             <Row>
               <Col sm={8}>{product.product}</Col>
               <Col sm={4} className="text-right">
-                {format(product.price)}
+                {formatCurrency(product.price)}
               </Col>
             </Row>
           </ListGroup.Item>

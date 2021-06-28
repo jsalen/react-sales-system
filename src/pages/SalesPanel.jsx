@@ -5,8 +5,7 @@ import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
 
 import "./styles/SalesPanel.css";
-import formatCurrency from "../libs/formatCurrency";
-import { getTotalAmmount } from "../libs/getTotalAmmount";
+import { getTotalAmmount, formatCurrency } from "../libs/helpers";
 
 export default function SalesPanel() {
   const [cart, setCart] = useState([]);
@@ -27,6 +26,7 @@ export default function SalesPanel() {
         <Col sm={7} className="sales__list">
           <SalesCart cart={cart} setCart={setCart} />
         </Col>
+
         <Col sm={5} className="sales__list">
           <ProductList cart={cart} setCart={setCart} />
         </Col>
@@ -35,6 +35,7 @@ export default function SalesPanel() {
         <Col sm={7} className="text-right">
           {cart.length > 0 && <h3>Su total es de: {totalAmmount()}</h3>}
         </Col>
+
         <Col sm={5} className="d-flex justify-content-around">
           <Button variant="danger" onClick={() => deleteCart()}>
             Cancelar

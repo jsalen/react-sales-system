@@ -1,6 +1,6 @@
 import React from "react";
 import { ListGroup, Button, Col, Row } from "react-bootstrap";
-import formatCurrency from "../../libs/formatCurrency";
+import { formatCurrency } from "../../libs/helpers";
 
 export default function SalesCart({ cart, setCart }) {
   const deleteProduct = (productToRemove) => {

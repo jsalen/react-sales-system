@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import swal from "sweetalert";
-import format from "../../libs/formatCurrency";
+import { formatCurrency } from "../../libs/helpers";
+
 import { getProducts, deleteProduct } from "../../services/products";
 
 export default function InventoryList() {
@@ -45,7 +46,7 @@ export default function InventoryList() {
         <tr key={product._id}>
           <td>{product.product}</td>
           <td>{product.quantity}</td>
-          <td>{format(product.price)}</td>
+          <td>{formatCurrency(product.price)}</td>
           <td className="d-flex justify-content-around">
             <Button
               variant="primary"
