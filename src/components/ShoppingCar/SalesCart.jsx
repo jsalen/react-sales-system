@@ -12,7 +12,7 @@ export default function SalesCart({ cart, setCart }) {
       <h2 className="text-center">Lista de Compras</h2>
       <ListGroup variant="flush">
         {cart.map((product, i) => (
-          <ListGroup.Item key={i}>
+          <ListGroup.Item className="product" key={i}>
             <Row className="d-flex align-items-center">
               <Col sm={8}>{product.product}</Col>
               <Col sm={2}>{formatCurrency(product.price)}</Col>

@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
 
-import "./styles/ShoppingCar.css";
+import "./styles/SalesPanel.css";
 import formatCurrency from "../libs/formatCurrency";
 import { getTotalAmmount } from "../libs/getTotalAmmount";
 

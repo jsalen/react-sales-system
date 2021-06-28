@@ -9,3 +9,11 @@ export const getProducts = async () => {
     return "Error";
   }
 };
+
+export const deleteProduct = async (id) => {
+  try {
+    await axios.delete(URI + id);
+  } catch (error) {
+    console.log("error", error);
+  }
+};

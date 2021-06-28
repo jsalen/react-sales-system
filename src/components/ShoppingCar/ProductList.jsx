@@ -27,7 +27,11 @@ export default function ProductList({ setCart, cart }) {
       <ListGroup className="mt-2" variant="flush">
         {loading && <h3>Loading...</h3>}
         {products.map((product) => (
-          <ListGroup.Item key={product._id} onClick={() => addToCart(product)}>
+          <ListGroup.Item
+            className="product"
+            key={product._id}
+            onClick={() => addToCart(product)}
+          >
             <Row>
               <Col sm={8}>{product.product}</Col>
               <Col sm={4} className="text-right">
