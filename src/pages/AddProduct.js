@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewProductForm from "../components/Inventory/NewProductForm.jsx";
+import NewProductForm from "../components/Inventory/NewProductForm";
 import { Container, Row } from "react-bootstrap";
 import axios from "axios";
 import swal from "sweetalert";
