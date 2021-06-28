@@ -1,5 +1,6 @@
 import React from "react";
 import { ListGroup, Button, Col, Row } from "react-bootstrap";
+import EmptyCart from "./EmptyCart";
 import { formatCurrency } from "../../libs/helpers";
 
 export default function SalesCart({ cart, setCart }) {
@@ -10,6 +11,7 @@ export default function SalesCart({ cart, setCart }) {
   return (
     <React.Fragment>
       <h2 className="text-center">Lista de Compras</h2>
+      {cart.length === 0 && <EmptyCart />}
       <ListGroup variant="flush">
         {cart.map((product, i) => (
           <ListGroup.Item className="product" key={i}>

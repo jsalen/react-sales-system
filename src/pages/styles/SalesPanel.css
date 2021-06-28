@@ -11,3 +11,19 @@
 .product {
   cursor: pointer;
 }
+
+.empty-cart {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  color: #8f9294;
+  border-top: 1px solid #8f9294;
+}
+
+.empty-cart__icon {
+  width: 250px;
+  opacity: 0.6;
+}

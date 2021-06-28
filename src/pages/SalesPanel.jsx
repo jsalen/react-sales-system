@@ -37,10 +37,16 @@ export default function SalesPanel() {
         </Col>
 
         <Col sm={5} className="d-flex justify-content-around">
-          <Button variant="danger" onClick={() => deleteCart()}>
+          <Button
+            className="btn-lg"
+            variant="danger"
+            onClick={() => deleteCart()}
+          >
             Cancelar
           </Button>
-          <Button variant="outline-success">Aceptar</Button>
+          <Button className="btn-lg" variant="outline-success">
+            Aceptar
+          </Button>
         </Col>
       </Row>
     </Container>
