@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
 import SearchBar from "../SearchBar/SearchBar";
 import { formatCurrency } from "../../libs/helpers";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 
 export default function ProductList({ setCart, cart }) {
   let { data, isPending, error } = useFetch();
