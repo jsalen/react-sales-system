@@ -8,10 +8,10 @@ export const formatCurrency = (money) => {
   return formatedCurrency;
 };
 
-export const getTotalAmmount = (ammount) => {
-  let totalAmmount = ammount.reduce((sum, { price }) => sum + price, 0);
+export const getTotalAmount = (amount) => {
+  let totalAmount = amount.reduce((sum, { price }) => sum + price, 0);
 
-  return totalAmmount;
+  return totalAmount;
 };
 
 export const confirmDeletion = async () => {
