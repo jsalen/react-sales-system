@@ -8,13 +8,14 @@
   padding-bottom: 16px;
 }
 
+.sales-cart__icon {
+  width: 20px;
+  cursor: pointer;
+}
+
 .sales__list {
   max-height: calc(100vh - 168px);
   overflow: auto;
-}
-
-.product {
-  cursor: pointer;
 }
 
 .empty-cart {
@@ -30,4 +31,12 @@
 .empty-cart__icon {
   width: 250px;
   opacity: 0.6;
+}
+
+.loading {
+  color: #8f9294;
+}
+
+.product-list__item {
+  cursor: pointer;
 }

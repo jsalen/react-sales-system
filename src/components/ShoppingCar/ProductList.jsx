@@ -16,11 +16,11 @@ export default function ProductList({ setCart, cart }) {
     <React.Fragment>
       <SearchBar />
       <ListGroup className="mt-2" variant="flush">
-        {isPending && <h3>Loading...</h3>}
+        {isPending && <h4 className="loading">Loading...</h4>}
         {error && <h3>Hubo un problema...</h3>}
         {data.map((product) => (
           <ListGroup.Item
-            className="product"
+            className="product-list__item"
             key={product._id}
             onClick={() => addToCart(product)}
           >
