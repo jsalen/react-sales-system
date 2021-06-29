@@ -3,6 +3,11 @@
   max-height: calc(100vh - 168px);
 }
 
+.sales-cart__title {
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 16px;
+}
+
 .sales__list {
   max-height: calc(100vh - 168px);
   overflow: auto;
@@ -20,7 +25,6 @@
   align-items: center;
   margin: auto 0;
   color: #8f9294;
-  border-top: 1px solid #8f9294;
 }
 
 .empty-cart__icon {

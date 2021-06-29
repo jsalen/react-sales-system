@@ -10,7 +10,7 @@ export default function SalesCart({ cart, setCart }) {
 
   return (
     <React.Fragment>
-      <h2 className="text-center">Lista de Compras</h2>
+      <h2 className="text-center sales-cart__title">Lista de Compras</h2>
       {cart.length === 0 && <EmptyCart />}
       <ListGroup variant="flush">
         {cart.map((product, i) => (
