@@ -10,9 +10,7 @@ import { getTotalAmount, formatCurrency } from "../libs/helpers";
 export default function SalesPanel() {
   const [cart, setCart] = useState([]);
 
-  const deleteCart = () => {
-    setCart([]);
-  };
+  const deleteCart = () => setCart([]);
 
   const totalAmount = () => formatCurrency(getTotalAmount(cart));
 
