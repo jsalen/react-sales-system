@@ -5,7 +5,7 @@ import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
 
 import "./styles/SalesPanel.css";
-import { getTotalAmmount, formatCurrency } from "../libs/helpers";
+import { getTotalAmount, formatCurrency } from "../libs/helpers";
 
 export default function SalesPanel() {
   const [cart, setCart] = useState([]);
@@ -14,11 +14,7 @@ export default function SalesPanel() {
     setCart([]);
   };
 
-  const totalAmmount = () => {
-    let totalAmmount = getTotalAmmount(cart);
-
-    return formatCurrency(totalAmmount);
-  };
+  const totalAmount = () => formatCurrency(getTotalAmount(cart));
 
   return (
     <Container className="mt-4">
@@ -33,7 +29,7 @@ export default function SalesPanel() {
       </Row>
       <Row className="mt-4">
         <Col sm={7} className="text-right">
-          {cart.length > 0 && <h3>Su total es de: {totalAmmount()}</h3>}
+          {cart.length > 0 && <h3>Su total es de: {totalAmount()}</h3>}
         </Col>
 
         <Col sm={5} className="d-flex justify-content-around">
