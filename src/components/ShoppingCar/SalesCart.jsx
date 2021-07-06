@@ -16,9 +16,12 @@ export default function SalesCart({ cart, setCart }) {
         {cart.map((product, i) => (
           <ListGroup.Item className="product" key={i}>
             <Row className="d-flex align-items-center">
+              <Col sm={1}>{product.qtyInCart}</Col>
               <Col sm={8}>{product.product}</Col>
-              <Col sm={2}>{formatCurrency(product.price)}</Col>
               <Col sm={2}>
+                {formatCurrency(product.price * product.qtyInCart)}
+              </Col>
+              <Col sm={1}>
                 <Button
                   variant="outline-danger"
                   size="sm"

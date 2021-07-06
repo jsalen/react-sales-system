@@ -9,7 +9,10 @@ export const formatCurrency = (money) => {
 };
 
 export const getTotalAmount = (amount) => {
-  let totalAmount = amount.reduce((sum, { price }) => sum + price, 0);
+  let totalAmount = amount.reduce(
+    (sum, { price, qtyInCart }) => sum + price * qtyInCart,
+    0
+  );
 
   return totalAmount;
 };
