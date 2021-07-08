@@ -5,7 +5,11 @@ import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
 
 import "./styles/SalesPanel.css";
-import { getTotalAmount, formatCurrency } from "../libs/helpers";
+import {
+  getTotalAmount,
+  formatCurrency,
+  notEnoughInventory,
+} from "../libs/helpers";
 
 export default function SalesPanel() {
   const [cart, setCart] = useState([]);
@@ -13,6 +17,19 @@ export default function SalesPanel() {
   const deleteCart = () => setCart([]);
 
   const totalAmount = () => getTotalAmount(cart);
+
+  const handleSubmit = async () => {
+    if (cart.length > 0) {
+      for (let item in cart) {
+        if (cart[item].qtyInCart > cart[item].quantity) {
+          await notEnoughInventory(cart[item].product, cart[item].quantity);
+          setCart([]);
+        } else {
+          console.log("vendido");
+        }
+      }
+    }
+  };
 
   return (
     <Container className="mt-4">
