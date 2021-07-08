@@ -29,3 +29,17 @@ export const confirmDeletion = async () => {
 
   return confirmDeletion;
 };
+
+export const notEnoughInventory = async (product, quantity) => {
+  await swal({
+    text: `No hay suficientes ${product}. ${
+      quantity > 1
+        ? `Quedan ${quantity} disponibles.`
+        : `Queda ${quantity} disponible`
+    }`,
+    buttons: {
+      confirm: "Ok",
+    },
+    icon: "error",
+  });
+};
