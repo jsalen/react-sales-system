@@ -12,7 +12,7 @@ export default function SalesPanel() {
 
   const deleteCart = () => setCart([]);
 
-  const totalAmount = () => formatCurrency(getTotalAmount(cart));
+  const totalAmount = () => getTotalAmount(cart);
 
   return (
     <Container className="mt-4">
@@ -27,7 +27,9 @@ export default function SalesPanel() {
       </Row>
       <Row className="mt-4">
         <Col sm={7} className="text-right">
-          {cart.length > 0 && <h3>Su total es de: {totalAmount()}</h3>}
+          {cart.length > 0 && (
+            <h3>Su total es de: {formatCurrency(totalAmount())}</h3>
+          )}
         </Col>
 
         <Col sm={5} className="d-flex justify-content-around">
@@ -38,7 +40,11 @@ export default function SalesPanel() {
           >
             Cancelar
           </Button>
-          <Button className="btn-lg" variant="outline-success">
+          <Button
+            className="btn-lg"
+            variant="outline-success"
+            onClick={handleSubmit}
+          >
             Aceptar
           </Button>
         </Col>
