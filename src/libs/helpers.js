@@ -30,6 +30,29 @@ export const confirmDeletion = async () => {
   return confirmDeletion;
 };
 
+export const confirmSale = async () => {
+  const confirmDeletion = await swal({
+    text: "¿Estás seguro que deseas terminar esta venta?",
+    buttons: {
+      cancel: "Cerrar",
+      confirm: "Eliminar",
+    },
+    icon: "warning",
+  });
+
+  return confirmDeletion;
+};
+
+export const saleMade = () => {
+  swal({
+    text: "Gracias por su compra!",
+    buttons: {
+      confirm: "Ok",
+    },
+    icon: "success",
+  });
+};
+
 export const notEnoughInventory = async (product, quantity) => {
   await swal({
     text: `No hay suficientes ${product}. ${
