@@ -23,7 +23,7 @@ export default function SalesPanel() {
 
   const handleSubmit = async () => {
     if (cart.length > 0) {
-      const confirm = await confirmSale();
+      const confirm = await confirmSale(totalAmount());
 
       if (confirm) {
         for (let item in cart) {
