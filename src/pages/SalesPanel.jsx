@@ -9,7 +9,10 @@ import {
   getTotalAmount,
   formatCurrency,
   notEnoughInventory,
+  confirmSale,
+  saleMade,
 } from "../libs/helpers";
+import { createSale } from "../services/sales";
 
 export default function SalesPanel() {
   const [cart, setCart] = useState([]);
@@ -20,13 +23,18 @@ export default function SalesPanel() {
 
   const handleSubmit = async () => {
     if (cart.length > 0) {
-      for (let item in cart) {
-        if (cart[item].qtyInCart > cart[item].quantity) {
-          await notEnoughInventory(cart[item].product, cart[item].quantity);
-          setCart([]);
-        } else {
-          console.log("vendido");
+      const confirm = await confirmSale();
+
+      if (confirm) {
+        for (let item in cart) {
+          if (cart[item].qtyInCart > cart[item].quantity) {
+            await notEnoughInventory(cart[item].product, cart[item].quantity);
+            return;
+          }
         }
+        createSale(cart, totalAmount());
+        setCart([]);
+        saleMade();
       }
     }
   };
