@@ -30,17 +30,18 @@ export const confirmDeletion = async () => {
   return confirmDeletion;
 };
 
-export const confirmSale = async () => {
-  const confirmDeletion = await swal({
-    text: "¿Estás seguro que deseas terminar esta venta?",
+export const confirmSale = async (amount) => {
+  const confirm = await swal({
+    title: "¿Está lista la venta?",
+    text: `Confirmar monto total: ${formatCurrency(amount)}`,
     buttons: {
-      cancel: "Cerrar",
-      confirm: "Eliminar",
+      cancel: "Cancelar",
+      confirm: "Aceptar",
     },
     icon: "warning",
   });
 
-  return confirmDeletion;
+  return confirm;
 };
 
 export const saleMade = () => {
