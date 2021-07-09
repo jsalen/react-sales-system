@@ -6,6 +6,7 @@ import { getProducts, deleteProduct } from "../../services/products";
 
 export default function InventoryList({ isAdmin }) {
   const [products, setProducts] = useState([]);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   let isRendered = useRef(true);
   useEffect(() => {
@@ -22,13 +23,14 @@ export default function InventoryList({ isAdmin }) {
     return () => {
       isRendered = false;
     };
-  }, [products]);
+  }, [isDeleted]);
 
   const handleDelete = async (id) => {
     const confirmation = await confirmDeletion();
 
     if (confirmation) {
       await deleteProduct(id);
+      isDeleted ? setIsDeleted(false) : setIsDeleted(true);
     }
   };
 
