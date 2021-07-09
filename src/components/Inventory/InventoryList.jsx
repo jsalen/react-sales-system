@@ -4,7 +4,7 @@ import { formatCurrency, confirmDeletion } from "../../libs/helpers";
 
 import { getProducts, deleteProduct } from "../../services/products";
 
-export default function InventoryList() {
+export default function InventoryList({ isAdmin }) {
   const [products, setProducts] = useState([]);
 
   let isRendered = useRef(true);
@@ -44,22 +44,24 @@ export default function InventoryList() {
             <td>{product.product}</td>
             <td>{product.quantity}</td>
             <td>{formatCurrency(product.price)}</td>
-            <td className="d-flex justify-content-around">
-              <Button
-                variant="primary"
-                size="sm"
-                href={"/editProduct/" + product._id}
-              >
-                Editar
-              </Button>
-              <Button
-                variant="danger"
-                size="sm"
-                onClick={() => handleDelete(product._id)}
-              >
-                Eliminar
-              </Button>
-            </td>
+            {isAdmin && (
+              <td className="d-flex justify-content-around">
+                <Button
+                  variant="primary"
+                  size="sm"
+                  href={"/editProduct/" + product._id}
+                >
+                  Editar
+                </Button>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => handleDelete(product._id)}
+                >
+                  Eliminar
+                </Button>
+              </td>
+            )}
           </tr>
         ))
       )}
