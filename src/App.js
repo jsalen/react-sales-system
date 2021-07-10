@@ -10,6 +10,7 @@ import SalesPanel from "./pages/SalesPanel";
 import Admin from "./pages/Admin";
 import Inventory from "./pages/Inventory";
 import AddProduct from "./pages/AddProduct";
+import Reports from "./pages/Reports";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/inventory" component={Inventory} />
       <Route path="/editProduct/:id" component={AddProduct} />
       <Route path="/addProduct" component={AddProduct} />
+      <Route path="/reports" component={Reports} />
     </Router>
   );
 }
