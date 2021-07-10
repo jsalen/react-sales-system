@@ -24,6 +24,7 @@ export default function ReportsRow({ data, isPending, error }) {
             <td>{formatDate(sale.date)}</td>
             <td>{sale.products.length}</td>
             <td>{sale.totalPrice}</td>
+            <td>Boton</td>
           </tr>
         ))
       )}
