@@ -2,6 +2,15 @@ import axios from "axios";
 const URI_SALES = "http://localhost:4000/api/sales/";
 const URI_PRODUCTS = "http://localhost:4000/api/products/";
 
+export const getSales = async () => {
+  try {
+    const res = await axios.get(URI_SALES);
+    return res;
+  } catch (error) {
+    return error;
+  }
+};
+
 export const createSale = async (sale, total) => {
   const newSale = {
     products: sale,

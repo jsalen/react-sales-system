@@ -1,4 +1,5 @@
 import swal from "sweetalert";
+import dateFormat from "dateformat";
 
 export const formatCurrency = (money) => {
   const formatedCurrency = new Intl.NumberFormat("en-US", {
@@ -6,6 +7,10 @@ export const formatCurrency = (money) => {
     currency: "USD",
   }).format(money);
   return formatedCurrency;
+};
+
+export const formatDate = (date) => {
+  return dateFormat(date, "dd, mmm, yyyy - HH:MM:ss");
 };
 
 export const getTotalAmount = (amount) => {
