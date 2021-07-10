@@ -10,7 +10,7 @@ export const formatCurrency = (money) => {
 };
 
 export const formatDate = (date) => {
-  return dateFormat(date, "dd, mmm, yyyy - HH:MM:ss");
+  return dateFormat(date, "dd/mm/yyyy - HH:MM:ss");
 };
 
 export const getTotalAmount = (amount) => {
