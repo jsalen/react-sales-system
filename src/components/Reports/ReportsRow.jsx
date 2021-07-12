@@ -1,4 +1,6 @@
 import React from "react";
+import ReportsDetails from "./ReportsDetails";
+
 import { formatDate, formatCurrency } from "../../libs/helpers";
 
 export default function ReportsRow({ data, isPending, error }) {
@@ -26,7 +28,12 @@ export default function ReportsRow({ data, isPending, error }) {
             <td>{formatCurrency(sale.totalPrice)}</td>
             <td>Admin</td>
             <td>
-              <button className="btn btn-primary">Detalles</button>
+              <button
+                className="btn btn-primary"
+                onClick={() => ReportsDetails(sale)}
+              >
+                Detalles
+              </button>
             </td>
           </tr>
         ))

@@ -3,3 +3,16 @@ input {
   padding: 2px;
   margin-left: 8px;
 }
+
+.reports__details-title {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #cecece;
+}
+.reports__details-description {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #cecece;
+  font-size: 1.2rem;
+  text-align: right;
+}
