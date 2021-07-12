@@ -13,6 +13,7 @@ export default function ReportsTable() {
         <tr>
           <th>Fecha</th>
           <th>Cantidad de Productos</th>
+          <th>Monto Total (USD)</th>
           <th>Vendedor</th>
           <th>Detalles</th>
         </tr>

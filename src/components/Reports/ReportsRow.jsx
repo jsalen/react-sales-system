@@ -1,5 +1,5 @@
 import React from "react";
-import { formatDate } from "../../libs/helpers";
+import { formatDate, formatCurrency } from "../../libs/helpers";
 
 export default function ReportsRow({ data, isPending, error }) {
   return (
@@ -23,8 +23,11 @@ export default function ReportsRow({ data, isPending, error }) {
           <tr key={i}>
             <td>{formatDate(sale.date)}</td>
             <td>{sale.products.length}</td>
-            <td>{sale.totalPrice}</td>
-            <td>Boton</td>
+            <td>{formatCurrency(sale.totalPrice)}</td>
+            <td>Admin</td>
+            <td>
+              <button className="btn btn-primary">Detalles</button>
+            </td>
           </tr>
         ))
       )}
