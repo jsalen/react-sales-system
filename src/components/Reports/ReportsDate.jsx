@@ -13,6 +13,7 @@ export default function ReportsDate({ startDate, setStartDate }) {
         dateFormat="dd/MM/yyyy"
         className="datapicker"
         maxDate={new Date()}
+        todayButton="Hoy"
       />
     </React.Fragment>
   );
