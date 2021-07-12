@@ -8,17 +8,19 @@ export default function ReportsTable() {
   let { data, isPending, error } = useFetchSales();
 
   return (
-    <Table striped bordered hover className="mt-3">
-      <thead className="thead-dark">
-        <tr>
-          <th>Fecha</th>
-          <th>Cantidad de Productos</th>
-          <th>Monto Total (USD)</th>
-          <th>Vendedor</th>
-          <th>Detalles</th>
-        </tr>
-      </thead>
-      <ReportsRow data={data} isPending={isPending} error={error} />
-    </Table>
+    <div className="reports__table">
+      <Table striped bordered hover>
+        <thead className="thead-dark sticky-top">
+          <tr>
+            <th>Fecha</th>
+            <th>Cantidad de Productos</th>
+            <th>Monto Total (USD)</th>
+            <th>Vendedor</th>
+            <th>Detalles</th>
+          </tr>
+        </thead>
+        <ReportsRow data={data} isPending={isPending} error={error} />
+      </Table>
+    </div>
   );
 }

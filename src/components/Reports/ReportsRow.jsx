@@ -8,17 +8,17 @@ export default function ReportsRow({ data, isPending, error }) {
     <tbody>
       {isPending && (
         <tr>
-          <td>Loading...</td>
+          <td colSpan="5">Loading...</td>
         </tr>
       )}
       {error && (
         <tr>
-          <td>Hubo un error</td>
+          <td colSpan="5">Hubo un error</td>
         </tr>
       )}
       {data === undefined || data.length === 0 ? (
         <tr>
-          <td>No hay datos</td>
+          <td colSpan="5">No hay ventas que mostrar.</td>
         </tr>
       ) : (
         data.map((sale, i) => (

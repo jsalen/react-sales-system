@@ -8,3 +8,7 @@ a.button:hover {
   transition: all 0.2s;
   cursor: pointer;
 }
+
+.table {
+  margin-bottom: 0;
+}
