@@ -11,6 +11,7 @@ export default function ReportsDate({ startDate, setStartDate }) {
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         dateFormat="dd/MM/yyyy"
+        className="datapicker"
       />
     </React.Fragment>
   );

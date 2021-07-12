@@ -16,3 +16,7 @@ input {
   font-size: 1.2rem;
   text-align: right;
 }
+
+.datapicker {
+  cursor: pointer;
+}
