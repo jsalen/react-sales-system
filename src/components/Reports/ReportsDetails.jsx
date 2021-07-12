@@ -18,7 +18,7 @@ export default function ReportsDetails({ products, totalPrice, date }) {
           {products.map((product, i) => (
             <tr key={i}>
               <td>{product.product}</td>
-              <td>{product.price}</td>
+              <td>{formatCurrency(product.price)}</td>
             </tr>
           ))}
         </tbody>
