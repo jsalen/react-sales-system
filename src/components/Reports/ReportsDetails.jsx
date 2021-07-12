@@ -16,7 +16,7 @@ export default function ReportsDetails({ products, totalPrice, date }) {
         </thead>
         <tbody>
           {products.map((product, i) => (
-            <tr>
+            <tr key={i}>
               <td>{product.product}</td>
               <td>{product.price}</td>
             </tr>
