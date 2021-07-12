@@ -12,6 +12,7 @@ export default function ReportsDate({ startDate, setStartDate }) {
         onChange={(date) => setStartDate(date)}
         dateFormat="dd/MM/yyyy"
         className="datapicker"
+        maxDate={new Date()}
       />
     </React.Fragment>
   );
