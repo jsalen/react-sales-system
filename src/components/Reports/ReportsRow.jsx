@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReportsDetails from "./ReportsDetails";
 
 import { formatDate, formatCurrency } from "../../libs/helpers";
 
 export default function ReportsRow({ data, isPending, error }) {
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
   return (
     <tbody>
       {isPending && (
