@@ -4,6 +4,26 @@ input {
   margin-left: 8px;
 }
 
+.reports__date {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reports__date-label {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.reports__date-button {
+  width: 65px;
+  margin-left: 8px;
+}
+
 .reports__table {
   margin-top: 16px;
   margin-bottom: 0;
@@ -25,6 +45,7 @@ input {
   padding-bottom: 12px;
   border-bottom: 1px solid #cecece;
 }
+
 .reports__details-description {
   margin-top: 12px;
   padding-top: 12px;
