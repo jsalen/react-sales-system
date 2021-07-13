@@ -11,6 +11,15 @@ export const getSales = async () => {
   }
 };
 
+export const getSalesByDate = async (date) => {
+  try {
+    const res = await axios.get(URI_SALES + date);
+    return res;
+  } catch (error) {
+    return error;
+  }
+};
+
 export const createSale = async (sale, total) => {
   const newSale = {
     products: sale,
