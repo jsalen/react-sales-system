@@ -17,9 +17,11 @@ export const useFetch = () => {
             statusText: res.message ? res.message : "Ocurrió un error",
           };
         }
-        let data = res.data;
+        const filteredProductsByStock = res.data.filter(
+          (product) => product.quantity > 0
+        );
         setIsPending(false);
-        setData(data);
+        setData(filteredProductsByStock);
       } catch (error) {
         setError(error);
         console.error(error.status, error.statusText);
