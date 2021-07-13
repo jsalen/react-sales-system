@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReportsDetails from "./ReportsDetails";
 
 import { formatDate, formatCurrency } from "../../libs/helpers";
 
 export default function ReportsRow({ data, isPending, error }) {
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
   return (
     <tbody>
       {isPending && (
@@ -24,7 +27,6 @@ export default function ReportsRow({ data, isPending, error }) {
         data.map((sale, i) => (
           <tr key={i}>
             <td>{formatDate(sale.date)}</td>
-            <td>{sale.products.length}</td>
             <td>{formatCurrency(sale.totalPrice)}</td>
             <td>Admin</td>
             <td>

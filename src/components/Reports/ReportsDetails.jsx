@@ -11,13 +11,15 @@ export default function ReportsDetails({ products, totalPrice, date }) {
         <thead className="thead-dark">
           <tr>
             <th>Producto</th>
-            <th>Precio</th>
+            <th>Unidades</th>
+            <th>Precio Unidad</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product, i) => (
             <tr key={i}>
               <td>{product.product}</td>
+              <td>{product.qtyInCart}</td>
               <td>{formatCurrency(product.price)}</td>
             </tr>
           ))}

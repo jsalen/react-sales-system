@@ -11,7 +11,6 @@ export default function ReportsTable({ data }) {
         <thead className="thead-dark sticky-top">
           <tr>
             <th>Fecha</th>
-            <th>Cantidad de Productos</th>
             <th>Monto Total (USD)</th>
             <th>Vendedor</th>
             <th>Detalles</th>
