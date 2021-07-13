@@ -4,31 +4,22 @@ import { Container } from "react-bootstrap";
 import ReportsDate from "../components/Reports/ReportsDate";
 import ReportsFooter from "../components/Reports/ReportsFooter";
 import ReportsTable from "../components/Reports/ReportsTable";
-import { getSales, getSalesByDate } from "../services/sales";
+import { getSalesByDate } from "../services/sales";
 
 import "./styles/Reports.css";
 
 export default function Reports() {
-  const [startDate, setStartDate] = useState(null);
+  const [startDate, setStartDate] = useState(new Date());
   const [data, setData] = useState([]);
   const [isChanged, setIsChanged] = useState(false);
 
   useEffect(() => {
-    if (startDate === null) {
-      const getData = async () => {
-        const res = await getSales();
-        const data = res.data;
-        setData(data);
-      };
-      getData();
-    } else {
-      const getData = async () => {
-        const res = await getSalesByDate(startDate);
-        const data = res.data;
-        setData(data);
-      };
-      getData();
-    }
+    const getData = async () => {
+      const res = await getSalesByDate(startDate);
+      const data = res.data;
+      setData(data);
+    };
+    getData();
   }, [isChanged]);
 
   const handleChange = (date) => {
@@ -37,7 +28,7 @@ export default function Reports() {
   };
 
   const handleDelete = () => {
-    setStartDate(null);
+    setStartDate(new Date());
     isChanged ? setIsChanged(false) : setIsChanged(true);
   };
 
