@@ -8,11 +8,6 @@ import NoInventory from "./NoInventory";
 export default function ProductList({ setCart, cart }) {
   let { data, isPending, error } = useFetch();
 
-  /* const addToCart = (product) => {
-    let newCart = [...cart, { ...product }];
-    setCart(newCart);
-  }; */
-
   const addToCart = (product) => {
     let newCart = [...cart];
     let itemInCart = newCart.find((item) => product._id === item._id);
