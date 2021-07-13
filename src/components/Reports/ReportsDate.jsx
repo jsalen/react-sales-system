@@ -3,18 +3,24 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function ReportsDate({ startDate, setStartDate }) {
+export default function ReportsDate({ startDate, handleChange, handleDelete }) {
   return (
-    <React.Fragment>
+    <div className="reports__date">
       <label className="reports__date-label">Filtrar por fecha:</label>
       <DatePicker
         selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        onChange={(date) => handleChange(date)}
         dateFormat="dd/MM/yyyy"
         className="datapicker"
         maxDate={new Date()}
         todayButton="Hoy"
       />
-    </React.Fragment>
+      <button
+        className="btn btn-primary btn-sm reports__date-button"
+        onClick={handleDelete}
+      >
+        Reset
+      </button>
+    </div>
   );
 }

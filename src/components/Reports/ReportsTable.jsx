@@ -4,9 +4,7 @@ import ReportsRow from "./ReportsRow.jsx";
 import { Table } from "react-bootstrap";
 import { useFetchSales } from "../../hooks/useFetchSales";
 
-export default function ReportsTable() {
-  let { data, isPending, error } = useFetchSales();
-
+export default function ReportsTable({ data }) {
   return (
     <div className="reports__table">
       <Table striped bordered hover>
@@ -19,7 +17,7 @@ export default function ReportsTable() {
             <th>Detalles</th>
           </tr>
         </thead>
-        <ReportsRow data={data} isPending={isPending} error={error} />
+        <ReportsRow data={data} />
       </Table>
     </div>
   );
