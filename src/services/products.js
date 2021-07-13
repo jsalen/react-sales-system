@@ -12,7 +12,7 @@ export const getProducts = async () => {
 
 export const getProduct = async (id) => {
   try {
-    const res = axios.get(URI + id);
+    const res = await axios.get(URI + id);
     return res;
   } catch (error) {
     return error;
