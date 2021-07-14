@@ -41,7 +41,7 @@ export default function Reports() {
         handleDelete={handleDelete}
       />
       <ReportsTable data={data} />
-      <ReportsFooter />
+      <ReportsFooter data={data} />
     </Container>
   );
 }
