@@ -9,6 +9,8 @@ import { getProducts, deleteProduct } from "../services/products";
 
 import { Container, Col, Button, Table } from "react-bootstrap";
 
+import "./styles/Inventory.css";
+
 export default function Inventory() {
   const [isAdmin, setIsAdmin] = useState(true);
   const [products, setProducts] = useState([]);
@@ -44,29 +46,34 @@ export default function Inventory() {
   return (
     <Container className="mt-4 text-center inventory-container">
       <h1>{isAdmin ? "Administración" : "Consulta"} de inventario</h1>
-      <Button variant="primary" className="mb-4">
-        <Link to="/addProduct" className="button">
-          Nuevo Producto
-        </Link>
-      </Button>
       <Col className="col-md-6 offset-md-3">
         <SearchBar value={query} setQuery={setQuery} />
       </Col>
-      <Table striped bordered hover className="inventory-table mt-3">
-        <thead className="thead-dark">
-          <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio Unitario</th>
-            {isAdmin && <th>Acciones</th>}
-          </tr>
-        </thead>
-        <InventoryList
-          isAdmin={isAdmin}
-          products={search(products, query)}
-          handleDelete={handleDelete}
-        />
-      </Table>
+      <div className="inventory__table">
+        <Table striped bordered hover>
+          <thead className="thead-dark">
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              {isAdmin && <th>Acciones</th>}
+            </tr>
+          </thead>
+          <InventoryList
+            isAdmin={isAdmin}
+            products={search(products, query)}
+            handleDelete={handleDelete}
+          />
+        </Table>
+      </div>
+      <div className="inventory__footer">
+        <Link to="/admin" className="btn btn-danger">
+          Regresar
+        </Link>
+        <Link to="/addProduct" className="btn btn-primary">
+          Nuevo Producto
+        </Link>
+      </div>
     </Container>
   );
 }
