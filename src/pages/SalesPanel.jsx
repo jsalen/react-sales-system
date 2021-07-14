@@ -3,19 +3,24 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
-
-import "./styles/SalesPanel.css";
+import SearchBar from "../components/SearchBar/SearchBar.jsx";
 import {
   getTotalAmount,
   formatCurrency,
   notEnoughInventory,
   confirmSale,
   saleMade,
+  search,
 } from "../libs/helpers";
 import { createSale } from "../services/sales";
+import { useFetch } from "../hooks/useFetch";
+
+import "./styles/SalesPanel.css";
 
 export default function SalesPanel() {
+  const { data, isPending, error } = useFetch();
   const [cart, setCart] = useState([]);
+  const [query, setQuery] = useState("");
 
   const deleteCart = () => setCart([]);
 
@@ -47,7 +52,14 @@ export default function SalesPanel() {
         </Col>
 
         <Col sm={5} className="sales__list">
-          <ProductList cart={cart} setCart={setCart} />
+          <SearchBar query={query} setQuery={setQuery} />
+          <ProductList
+            cart={cart}
+            setCart={setCart}
+            data={search(data, query)}
+            isPending={isPending}
+            error={error}
+          />
         </Col>
       </Row>
       <Row className="mt-4">

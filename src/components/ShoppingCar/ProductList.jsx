@@ -1,13 +1,10 @@
 import React from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
-import SearchBar from "../SearchBar/SearchBar";
+
 import { formatCurrency } from "../../libs/helpers";
-import { useFetch } from "../../hooks/useFetch";
 import NoInventory from "./NoInventory";
 
-export default function ProductList({ setCart, cart }) {
-  let { data, isPending, error } = useFetch();
-
+export default function ProductList({ data, cart, setCart, isPending, error }) {
   const addToCart = (product) => {
     let newCart = [...cart];
     let itemInCart = newCart.find((item) => product._id === item._id);
@@ -26,7 +23,6 @@ export default function ProductList({ setCart, cart }) {
 
   return (
     <React.Fragment>
-      <SearchBar />
       <ListGroup className="mt-2" variant="flush">
         {isPending && <h4 className="loading">Loading...</h4>}
         {error && <h3>Hubo un problema...</h3>}
