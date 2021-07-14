@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import InventoryList from "../components/Inventory/InventoryList";
 import SearchBar from "../components/SearchBar/SearchBar";
 
-import { confirmDeletion } from "../libs/helpers";
+import { confirmDeletion, search } from "../libs/helpers";
 import { getProducts, deleteProduct } from "../services/products";
 
 import { Container, Col, Button, Table } from "react-bootstrap";
@@ -40,13 +40,6 @@ export default function Inventory() {
     }
   };
 
-  const search = (products) => {
-    return products.filter(
-      (product) =>
-        product.product.toLowerCase().indexOf(query.toLowerCase()) > -1
-    );
-  };
-
   return (
     <Container className="mt-4 text-center inventory-container">
       <h1>{isAdmin ? "Administración" : "Consulta"} de inventario</h1>
@@ -69,7 +62,7 @@ export default function Inventory() {
         </thead>
         <InventoryList
           isAdmin={isAdmin}
-          products={search(products)}
+          products={search(products, query)}
           handleDelete={handleDelete}
         />
       </Table>
