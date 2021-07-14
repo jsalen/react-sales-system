@@ -4,14 +4,10 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import SalesCart from "../components/ShoppingCar/SalesCart";
 import ProductList from "../components/ShoppingCar/ProductList";
 import SearchBar from "../components/SearchBar/SearchBar.jsx";
-import {
-  getTotalAmount,
-  formatCurrency,
-  notEnoughInventory,
-  confirmSale,
-  saleMade,
-  search,
-} from "../libs/helpers";
+
+import { getTotalAmount, formatCurrency } from "../libs/helpers";
+import { notEnoughInventory, confirmSale, saleMade } from "../libs/sales";
+import { search } from "../libs/search";
 import { createSale } from "../services/sales";
 import { useFetch } from "../hooks/useFetch";
 

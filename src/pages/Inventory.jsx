@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import InventoryList from "../components/Inventory/InventoryList";
 import SearchBar from "../components/SearchBar/SearchBar";
 
-import { confirmDeletion, search } from "../libs/helpers";
+import { confirmDeletion } from "../libs/inventory";
+import { search } from "../libs/search";
 import { getProducts, deleteProduct } from "../services/products";
 
 import { Container, Col, Button, Table } from "react-bootstrap";
