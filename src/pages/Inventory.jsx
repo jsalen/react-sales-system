@@ -1,13 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Col } from "react-bootstrap";
 import InventoryList from "../components/Inventory/InventoryList";
 import SearchBar from "../components/SearchBar/SearchBar";
 
-import { Container, Button, Table } from "react-bootstrap";
+import { confirmDeletion } from "../libs/helpers";
+import { getProducts, deleteProduct } from "../services/products";
+
+import { Container, Col, Button, Table } from "react-bootstrap";
 
 export default function Inventory() {
   const [isAdmin, setIsAdmin] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [query, setQuery] = useState("");
+  const [isDeleted, setIsDeleted] = useState(false);
+
+  let isRendered = useRef(true);
+  useEffect(() => {
+    try {
+      getProducts().then((data) => {
+        if (isRendered) {
+          setProducts(data.data);
+        }
+        return null;
+      });
+    } catch (error) {
+      console.error("error", error);
+    }
+    return () => {
+      isRendered = false;
+    };
+  }, [isDeleted]);
+
+  const handleDelete = async (id) => {
+    const confirmation = await confirmDeletion();
+
+    if (confirmation) {
+      await deleteProduct(id);
+      isDeleted ? setIsDeleted(false) : setIsDeleted(true);
+    }
+  };
+
+  const search = (products) => {
+    return products.filter(
+      (product) =>
+        product.product.toLowerCase().indexOf(query.toLowerCase()) > -1
+    );
+  };
 
   return (
     <Container className="mt-4 text-center inventory-container">
@@ -18,7 +56,7 @@ export default function Inventory() {
         </Link>
       </Button>
       <Col className="col-md-6 offset-md-3">
-        <SearchBar />
+        <SearchBar value={query} setQuery={setQuery} />
       </Col>
       <Table striped bordered hover className="inventory-table mt-3">
         <thead className="thead-dark">
@@ -29,7 +67,11 @@ export default function Inventory() {
             {isAdmin && <th>Acciones</th>}
           </tr>
         </thead>
-        <InventoryList isAdmin={isAdmin} />
+        <InventoryList
+          isAdmin={isAdmin}
+          products={search(products)}
+          handleDelete={handleDelete}
+        />
       </Table>
     </Container>
   );
