@@ -11,7 +11,7 @@ export default function ReportsDate({ startDate, handleChange, handleDelete }) {
         selected={startDate}
         onChange={(date) => handleChange(date)}
         dateFormat="dd/MM/yyyy"
-        className="datapicker"
+        className="datepicker"
         maxDate={new Date()}
         todayButton="Hoy"
       />

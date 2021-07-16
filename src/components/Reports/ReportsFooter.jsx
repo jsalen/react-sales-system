@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { formatCurrency } from "../../libs/helpers";
 
 export default function ReportsFooter({ data }) {
@@ -10,6 +11,9 @@ export default function ReportsFooter({ data }) {
 
   return (
     <div className="reports__footer">
+      <Link to="/admin" className="btn btn-danger">
+        Regresar
+      </Link>
       <h4 className="text-right">
         Facturación total del día:{" "}
         <span>{formatCurrency(getTotalAmount(data))}</span>

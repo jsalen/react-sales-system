@@ -55,10 +55,14 @@ input {
 }
 
 .reports__footer {
-  text-align: right;
-  padding-top: 24px;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-.datapicker {
+.datepicker {
   cursor: pointer;
 }
