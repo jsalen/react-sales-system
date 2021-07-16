@@ -7,12 +7,12 @@ import { confirmDeletion } from "../libs/inventory";
 import { search } from "../libs/search";
 import { getProducts, deleteProduct } from "../services/products";
 
-import { Container, Col, Button, Table } from "react-bootstrap";
+import { Container, Col, Table } from "react-bootstrap";
 
 import "./styles/Inventory.css";
 
 export default function Inventory() {
-  const [isAdmin, setIsAdmin] = useState(true);
+  const [isAdmin] = useState(true);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");
   const [isDeleted, setIsDeleted] = useState(false);

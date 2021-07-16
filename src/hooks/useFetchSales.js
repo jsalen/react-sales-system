@@ -11,11 +11,11 @@ export const useFetchSales = () => {
       try {
         let res = await getSales();
         if (res.status !== 200) {
-          throw {
+          throw new Error({
             error: true,
             status: res.status,
             statusText: res.message ? res.message : "Ocurrió un error",
-          };
+          });
         }
         let data = res.data;
         setIsPending(false);

@@ -1,4 +1,3 @@
-import swal from "sweetalert";
 import dateFormat from "dateformat";
 
 export const formatCurrency = (money) => {

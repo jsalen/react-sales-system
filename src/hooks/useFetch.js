@@ -11,11 +11,11 @@ export const useFetch = () => {
       try {
         let res = await getProducts();
         if (res.status !== 200) {
-          throw {
+          throw new Error({
             error: true,
             status: res.status,
             statusText: res.message ? res.message : "Ocurrió un error",
-          };
+          });
         }
         const filteredProductsByStock = res.data.filter(
           (product) => product.quantity > 0
