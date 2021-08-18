@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router";
+import { useSelector } from "react-redux";
+
 import { Container, Row } from "react-bootstrap";
 import { getProduct, updateProduct, createProduct } from "../services/products";
+
 import NewProductForm from "../components/Inventory/NewProductForm";
+
 import swal from "sweetalert";
 
 function AddProduct({ history, match }) {
+  const { user: currentUser } = useSelector((state) => state.auth);
   const [editing, setEditing] = useState(false);
   const [form, setForm] = useState({ product: "", quantity: "", price: "" });
 
@@ -50,6 +56,10 @@ function AddProduct({ history, match }) {
 
     history.push("/inventory");
   };
+
+  if (!currentUser.roles.includes("ROLE_ADMIN")) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <Container className="landing d-flex flex-column align-items-center">
