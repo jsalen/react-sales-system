@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import InventoryList from "../components/Inventory/InventoryList";
 import SearchBar from "../components/SearchBar/SearchBar";
 
@@ -12,13 +14,18 @@ import { Container, Col, Table } from "react-bootstrap";
 import "./styles/Inventory.css";
 
 export default function Inventory() {
-  const [isAdmin] = useState(true);
+  const { user: currentUser } = useSelector((state) => state.auth);
+
+  const [isAdmin, setIsAdmin] = useState(false);
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");
   const [isDeleted, setIsDeleted] = useState(false);
 
   let isRendered = useRef(true);
   useEffect(() => {
+    if (currentUser.roles.includes("ROLE_ADMIN")) {
+      setIsAdmin(true);
+    }
     try {
       getProducts().then((data) => {
         if (isRendered) {
@@ -70,9 +77,11 @@ export default function Inventory() {
         <Link to="/admin" className="btn btn-danger">
           Regresar
         </Link>
-        <Link to="/addProduct" className="btn btn-primary">
-          Nuevo Producto
-        </Link>
+        {isAdmin && (
+          <Link to="/addProduct" className="btn btn-primary">
+            Nuevo Producto
+          </Link>
+        )}
       </div>
     </Container>
   );
