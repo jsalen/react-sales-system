@@ -14,9 +14,6 @@ export default function Navigation() {
             <NavDropdown title="Menú" menuvariant="dark">
               <NavDropdown.Item href="/shopping-car">Vender</NavDropdown.Item>
               <NavDropdown.Item href="/reports">Reportes</NavDropdown.Item>
-              <NavDropdown.Item href="/close-cashier">
-                Cierre de Caja
-              </NavDropdown.Item>
               <NavDropdown.Item href="/admin">Admin</NavDropdown.Item>
             </NavDropdown>
           </Nav>
