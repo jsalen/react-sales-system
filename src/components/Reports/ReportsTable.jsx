@@ -11,7 +11,6 @@ export default function ReportsTable({ data }) {
           <tr>
             <th>Fecha</th>
             <th>Monto Total (USD)</th>
-            <th>Vendedor</th>
             <th>Detalles</th>
           </tr>
         </thead>

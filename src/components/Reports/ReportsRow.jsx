@@ -25,7 +25,6 @@ export default function ReportsRow({ data, isPending, error }) {
           <tr key={i}>
             <td>{formatDate(sale.date)}</td>
             <td>{formatCurrency(sale.totalPrice)}</td>
-            <td>Admin</td>
             <td>
               <button
                 className="btn btn-primary"
