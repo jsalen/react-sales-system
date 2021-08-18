@@ -39,26 +39,8 @@ function App() {
         path="/inventory"
         render={() => (currentUser ? <Inventory /> : <Redirect to="/login" />)}
       />
-      <Route
-        path="/editProduct/:id"
-        render={() =>
-          currentUser.roles.includes("ROLE_ADMIN") ? (
-            <AddProduct />
-          ) : (
-            <Redirect to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/addProduct"
-        render={() =>
-          currentUser.roles.includes("ROLE_ADMIN") ? (
-            <AddProduct />
-          ) : (
-            <Redirect to="/login" />
-          )
-        }
-      />
+      <Route path="/editProduct/:id" component={AddProduct} />
+      <Route path="/addProduct" component={AddProduct} />
       <Route
         path="/reports"
         render={() => (currentUser ? <Reports /> : <Redirect to="/login" />)}
