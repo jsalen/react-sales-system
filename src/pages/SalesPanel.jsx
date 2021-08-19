@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 import SalesCart from "../components/ShoppingCar/SalesCart";
@@ -14,6 +16,8 @@ import { useFetch } from "../hooks/useFetch";
 import "./styles/SalesPanel.css";
 
 export default function SalesPanel() {
+  const { user: currentUser } = useSelector((state) => state.auth);
+
   const { data, isPending, error } = useFetch();
   const [cart, setCart] = useState([]);
   const [query, setQuery] = useState("");
@@ -33,7 +37,7 @@ export default function SalesPanel() {
             return;
           }
         }
-        createSale(cart, totalAmount());
+        createSale(cart, totalAmount(), currentUser.name);
         setCart([]);
         saleMade();
       }

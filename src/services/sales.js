@@ -20,10 +20,11 @@ export const getSalesByDate = async (date) => {
   }
 };
 
-export const createSale = async (sale, total) => {
+export const createSale = async (sale, total, soldBy) => {
   const newSale = {
     products: sale,
     totalPrice: total,
+    soldBy,
   };
 
   try {

@@ -3,7 +3,7 @@ import { Table } from "react-bootstrap";
 import swalReact from "@sweetalert/with-react";
 import { formatCurrency, formatDate } from "../../libs/helpers";
 
-export default function ReportsDetails({ products, totalPrice, date }) {
+export default function ReportsDetails({ products, totalPrice, date, soldBy }) {
   swalReact(
     <div>
       <h2 className="reports__details-title">Detalles de la Venta</h2>
@@ -26,6 +26,7 @@ export default function ReportsDetails({ products, totalPrice, date }) {
         </tbody>
       </Table>
       <section className="reports__details-description">
+        <p>Vendedor: {soldBy.toLowerCase()}</p>
         <p>Monto Total: {formatCurrency(totalPrice)}</p>
         <p>Fecha de Venta: {formatDate(date)}</p>
       </section>
