@@ -48,10 +48,22 @@ function AddProduct({ history, match }) {
 
     if (editing) {
       await updateProduct(_id, newProduct);
-      swal("Producto Actualizado");
+      swal({
+        text: "Producto actualizado con éxito!",
+        buttons: {
+          confirm: "Ok",
+        },
+        icon: "success",
+      });
     } else {
       await createProduct(newProduct);
-      swal("Producto Añadido");
+      swal({
+        text: "Producto añadido con éxito!",
+        buttons: {
+          confirm: "Ok",
+        },
+        icon: "success",
+      });
     }
 
     history.push("/inventory");
