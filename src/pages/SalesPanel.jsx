@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import { Container, Row, Col, Button } from "react-bootstrap";
@@ -17,7 +17,7 @@ import "./styles/SalesPanel.css";
 
 export default function SalesPanel() {
   const { user: currentUser } = useSelector((state) => state.auth);
-
+  
   const { data, isPending, error } = useFetch();
   const [cart, setCart] = useState([]);
   const [query, setQuery] = useState("");
@@ -32,7 +32,11 @@ export default function SalesPanel() {
 
       if (confirm) {
         for (let item in cart) {
-          if (cart[item].qtyInCart > cart[item].quantity) {
+          
+          const dataQuantity = data
+            .filter(ob => ob._id === cart[item]._id)
+            .map(check => check.quantity)
+          if (cart[item].qtyInCart > dataQuantity) {
             await notEnoughInventory(cart[item].product, cart[item].quantity);
             return;
           }
