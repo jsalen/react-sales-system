@@ -46,7 +46,7 @@ export default function Inventory() {
 
     if (confirmation) {
       await deleteProduct(id);
-      isDeleted ? setIsDeleted(false) : setIsDeleted(true);
+      setIsDeleted(!isDeleted);
     }
   };
 
