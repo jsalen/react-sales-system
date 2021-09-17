@@ -17,7 +17,7 @@ export const confirmSale = async (amount) => {
 
 export const saleMade = () => {
   swal({
-    text: "Gracias por su compra!",
+    text: "Venta realizada con éxito!",
     buttons: {
       confirm: "Ok",
     },
