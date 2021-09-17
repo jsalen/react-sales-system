@@ -29,10 +29,10 @@ export const createSale = async (sale, total, soldBy) => {
 
   try {
     await axios.post(URI_SALES, newSale);
+    await updateInventoryFromSale(sale);
   } catch (error) {
     console.log(error);
   }
-  updateInventoryFromSale(sale);
 };
 
 async function updateInventoryFromSale(products) {
