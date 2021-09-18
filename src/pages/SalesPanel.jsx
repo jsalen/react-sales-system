@@ -80,8 +80,9 @@ export default function SalesPanel() {
           </Button>
           <Button
             className="btn-lg"
-            variant="outline-success"
+            variant={cart.length === 0 ? 'outline-success' : 'success'}
             onClick={handleSubmit}
+            disabled={cart.length === 0}
           >
             Aceptar
           </Button>
