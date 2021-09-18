@@ -64,9 +64,9 @@ export default function SalesPanel() {
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col sm={7} className="text-right">
+        <Col sm={7} className="d-flex justify-content-end align-items-center px-0">
           {cart.length > 0 && (
-            <h3>Su total es de: {formatCurrency(totalAmount())}</h3>
+            <h3 className="mb-0">Su total es de: {formatCurrency(totalAmount())}</h3>
           )}
         </Col>
 
