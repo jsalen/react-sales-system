@@ -22,8 +22,6 @@ export default function SalesPanel() {
   const [cart, setCart] = useState([]);
   const [query, setQuery] = useState("");
 
-  const deleteCart = () => setCart([]);
-
   const totalAmount = () => getTotalAmount(cart);
 
   const handleSubmit = async () => {
@@ -31,8 +29,7 @@ export default function SalesPanel() {
       const confirm = await confirmSale(totalAmount());
 
       if (confirm) {
-        for (let item in cart) {
-          
+        for (let item in cart) {          
           const dataQuantity = data
             .filter(ob => ob._id === cart[item]._id)
             .map(check => check.quantity)
@@ -77,7 +74,7 @@ export default function SalesPanel() {
           <Button
             className="btn-lg"
             variant="danger"
-            onClick={() => deleteCart()}
+            onClick={() => setCart([])}
           >
             Cancelar
           </Button>

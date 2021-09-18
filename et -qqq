@@ -1,0 +1,613 @@
+[33mcommit 268a395354b10c3f52d4130860108189ecef59eb[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:56:58 2021 -0400
+
+    deleted unnecesary code
+
+[33mcommit 65916b2ceab73185e5db7a03d6d61ab455aba6b2[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:56:40 2021 -0400
+
+    deleted unnecesary code
+
+[33mcommit 3afa6e1cb6d2d15573d687c77bed3c2323c71d57[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:40:00 2021 -0400
+
+    refactor unnecesary code
+
+[33mcommit 03d6619630755258c61f0736e82825bd21bf5e3b[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:39:30 2021 -0400
+
+    add function to check agaisnt data from db, not from local data
+
+[33mcommit 0f4d7c406f3d72581d40f7f08b2575fd4359ea12[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:37:56 2021 -0400
+
+    refactor status change
+
+[33mcommit 4b00d8b179268630a203bc33559ca3b6c3102f9c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:37:24 2021 -0400
+
+    fixed text copy
+
+[33mcommit 46971aaec842e4b7ee6a4527f7bfdab2a5fd375d[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:37:02 2021 -0400
+
+    fixed text copy
+
+[33mcommit ca5b03f9d97cd8bd0228c5d6ff497be078af6f8e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Sep 17 18:36:28 2021 -0400
+
+    moved update inventory callback into try-catch
+
+[33mcommit ce8a55096622ed9c8a39172e9bb419b460a7dbc1[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Thu Aug 19 17:08:45 2021 -0400
+
+    moved routing logic into a separate file
+
+[33mcommit 884872eb21750c0332068bdb9223d9ea1fa69eab[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Thu Aug 19 16:31:12 2021 -0400
+
+    added solBy data to display who made the sale
+
+[33mcommit 287f8d8943823b1e49e1fe2da0ed20a9770d8c1e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 18:00:46 2021 -0400
+
+    checks users auth
+
+[33mcommit 2676bd37eccbfd15d2f04b7da102c7553629a154[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 18:00:21 2021 -0400
+
+    checks users auth
+
+[33mcommit 16c4a02d813208e6091eb68c4f6694ff5fc05a89[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:59:36 2021 -0400
+
+    addproduct route now renders component and the component itself checks for users info
+
+[33mcommit b25c7935f44f8996c6152dde30b14489497a2987[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:40:24 2021 -0400
+
+    implemented redux to add Login and Registration functions
+
+[33mcommit 365e3f7915d88c676f032ab430d3dc28748037e0[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:39:16 2021 -0400
+
+    MVP CSS to Login and Register Form
+
+[33mcommit d1d63eadbbe1bec057a2a69ec4ccdfbc47b99cb9[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:38:35 2021 -0400
+
+    added redux provider and store
+
+[33mcommit c9516f4575327b4c58eb626181619121dd7310f3[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:38:06 2021 -0400
+
+    added custom text according to logged user
+
+[33mcommit 3e4122d07e25b24f01e1c4d607a721cd15d54de6[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:37:22 2021 -0400
+
+    refactored App to make private routes
+
+[33mcommit adf475ceb4631b95d9e7e10b2e89804a30fa797a[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:36:52 2021 -0400
+
+    reinstalled file
+
+[33mcommit 272889021e1e1207df432f32377ceb87eca44725[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Aug 18 17:36:32 2021 -0400
+
+    added redux and updated babel/runtime
+
+[33mcommit bb16679e485e61f8a9adf00786cefbfdb624e93c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Aug 17 21:59:23 2021 -0400
+
+    set project to work with redux
+
+[33mcommit 34caf34be88246f7fd22cdda38a83da323458585[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Aug 17 21:47:38 2021 -0400
+
+    deleted row - Vendido Por
+
+[33mcommit 6539c22a14c18e1034b204a626c73b8ce3d24151[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Aug 17 21:47:09 2021 -0400
+
+    changed title
+
+[33mcommit 2c77cb48d070ce9e8280ae1475af22d15af7ace6[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Aug 17 21:46:43 2021 -0400
+
+    deleted dead script
+
+[33mcommit 2c0ef1fc5b3b03d7c5647c9caed79333171e17c2[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Aug 17 21:46:18 2021 -0400
+
+    deleted dead link
+
+[33mcommit 90d52f6c927f44fa4252330d4afa8a4c9ac8b3ee[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 16 18:12:23 2021 -0400
+
+    refactored so fix code from linter
+
+[33mcommit a8f0bca8d946b6540ecb578588dfbb27ea24f6a0[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 16 18:11:55 2021 -0400
+
+    updated react-scripts to 2.0 so that it can support sweetAlerts code
+
+[33mcommit fde6a0718d4b01640457e30019567704847501b8[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 16 15:28:38 2021 -0400
+
+    added a new go back button on Reports page
+
+[33mcommit 4e1eb8e4e1fb8ea551b39f1d1a9941a7b9389900[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 22:42:12 2021 -0400
+
+    move buttons to bottom part of page, create a new Go Back btn
+
+[33mcommit bc18da0cdd24b4a549534a6ea6d1271c79fffb93[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 22:27:12 2021 -0400
+
+    refactor helpers into multiple files to make it easy to find the functions
+
+[33mcommit 0c7797accbfd7b5838c418b113c5eeceb7dc6a78[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 22:12:47 2021 -0400
+
+    refactor code so that search bar in Sales Panel can filter products
+
+[33mcommit 1c6dffd2677c995347b000544c8c8aad903f58af[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 21:51:59 2021 -0400
+
+    refactor code so that search function comes from helpers, to make it reusable
+
+[33mcommit 9330f32ec8e8b86b3b9cb2ded0075e1f888ea678[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 21:44:26 2021 -0400
+
+    create search query to filter products
+
+[33mcommit 87323267f96feedd4a533ba1ca00b85c0b75f05e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 20:03:50 2021 -0400
+
+    reports footer now shows the total amount sold during the selected day
+
+[33mcommit 2415f5351280d197b090af56853fb82e2d793082[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 19:51:33 2021 -0400
+
+    deleted unnecesary useEffect from ReportsSalesRow
+
+[33mcommit 4100b3ed0ce189cd061e10e6a5f98cf6a6d3281f[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 19:50:34 2021 -0400
+
+    deleted unnecesary information: Quantity of products in cart from Sales
+
+[33mcommit e42843fe4c2cd7a4a111f0e5d88db264effe1a73[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 19:37:04 2021 -0400
+
+    deleted unnecesary comment
+
+[33mcommit 678cef08c52ca47c59d8530b50906f61f26db446[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 19:36:18 2021 -0400
+
+    now it filters correctly the data according to Inventory quantity
+
+[33mcommit cccb5086c60aff188ac95d9ed0f221339148ea34[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 00:33:21 2021 -0400
+
+    now it displays today's sales by default
+
+[33mcommit 7a7c45853eb2a81dc63338bf1b5068460502b467[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 00:22:02 2021 -0400
+
+    refactor code reports triggers the initialState, and can change products displayed now
+
+[33mcommit 82349a9a01edada784d226cc675aff508e37ff9d[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 00:21:18 2021 -0400
+
+    style to date area
+
+[33mcommit f4cac699c7f19ba058498c399861989f031b607f[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 00:20:17 2021 -0400
+
+    add missing await statement
+
+[33mcommit 9308bfaadce5b6fb29d30340490b8737fc7f32a7[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Tue Jul 13 00:19:42 2021 -0400
+
+    create function to get sales by date
+
+[33mcommit c2ceffbcba4e8343cff8de8b9182b55171d6c634[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 19:59:27 2021 -0400
+
+    add Today button to select today's date
+
+[33mcommit 244e85f205c9fb34e8f6faa7a5e183a96ff0bd25[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 19:44:05 2021 -0400
+
+    change z-index of sticky table header and data picker, so they wont collapse
+
+[33mcommit b3c752fc6ca9be8a3083e8cf73278f8ac0747fbd[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 19:26:46 2021 -0400
+
+    change max date to filter to today's date
+
+[33mcommit 3402736c075b2c6fccf76c5d81bea1176f21f0ff[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 19:23:23 2021 -0400
+
+    fix style of Reports Page
+
+[33mcommit 07fc8fb1b1138dcd9055c33b8dec8b4b2f9475f5[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 17:27:05 2021 -0400
+
+    add formatCurrency to product's price on Details
+
+[33mcommit 0d6b63e4966db1c970e39dfe8dbff29b778e272a[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 17:25:48 2021 -0400
+
+    change hover cursor to Pointer
+
+[33mcommit e6d88f4b2d7745a488ac615b986b302edc64f114[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 16:05:02 2021 -0400
+
+    add a key to each item in table
+
+[33mcommit 7c324e644c99f910b1050b110122f4bb09677429[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 16:03:40 2021 -0400
+
+    create reports details from sale
+
+[33mcommit d0a5da77e8eedbcbf81b2cafa1d08a31a0a9dd42[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 12 15:32:05 2021 -0400
+
+    change aspect of table to include Salesperson's name and formatted currency
+
+[33mcommit 07f0fd4d8b54775d215bab32a3051aaed6206da5[m
+Merge: d810ccd 544f6c9
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 23:36:57 2021 -0400
+
+    Merge branch 'master' of github.com:jsalen/react-sales-system
+
+[33mcommit d810ccdeac0150e4f44ac059d845956adb827d70[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 23:30:25 2021 -0400
+
+    moved date state to father component so that later it can pass the date state to DateTable as a state
+
+[33mcommit 6e672e104ffaf8c457d807278fb2341676fcc642[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 23:29:44 2021 -0400
+
+    changed date format to match DatePicker component format
+
+[33mcommit 1d5ff5af6a59cf8e527f2c271018179f871f219d[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 23:24:15 2021 -0400
+
+    created a Reports Date component where user can choose a Date to filter the Sales. Todo: Make it functional lol
+
+[33mcommit 9d25bb0e3d32e336d8fda4a37621df50fbdd4ab8[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 22:48:26 2021 -0400
+
+    created base table that loads data from Sales
+
+[33mcommit d821e92ab11f090e536e41391886612a34541516[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 21:33:15 2021 -0400
+
+    created new component: Reports
+
+[33mcommit 544f6c9b230e8b702c533b26429917a1c738d127[m
+Merge: 9dab1ee 5693d27
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 21:12:46 2021 -0400
+
+    Merge branch 'master' of github.com:jsalen/react-sales-system
+
+[33mcommit 9dab1ee0f9598dc0cac341ae7a34e6e8dcd470cd[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 20:42:55 2021 -0400
+
+    now services/sales can update a product's quantity in DB after the sale has been made
+
+[33mcommit 5693d27b1303c2a30705ad705290b959b97f4580[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 9 20:42:55 2021 -0400
+
+    now helpers/sales can update a product's quantity in DB after the sale has been made
+
+[33mcommit 04afa1a9264bc31e81896353200da4b4f86473ed[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Thu Jul 8 22:45:13 2021 -0400
+
+    created a new state so that the useEffect can watch out for any changes (deleted item) without creating a memory leak
+
+[33mcommit e17f52ef3b6a7d13b3295fbe836b98003dfd4601[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Thu Jul 8 22:31:17 2021 -0400
+
+    created isAdmin state, so that the Inventory table shows Administrative options acording to the user's privileges
+
+[33mcommit 9e9f97b07dccfaf1ca9daf27e180a70e2bdd1a82[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 22:11:25 2021 -0400
+
+    fixed bug with navbar where it would collapse too soon
+
+[33mcommit 9c40f2af45569770d3f32f9a63e8b29a14edbe4c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 21:51:18 2021 -0400
+
+    changed the way the confirmation sale function show the information, now it shows total amount of sale
+
+[33mcommit cb4dba355443c4c60c93da9e7dd49c42cbb9ac21[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 21:50:48 2021 -0400
+
+    changed the way the confirmation sale function show the information, now it shows total amount of sale
+
+[33mcommit 475cf5f67316db3aa896ed6d60d75ec0ce9b480c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 21:30:49 2021 -0400
+
+    now the Sale is being posted into DB. TODO: Update item from DB with new values
+
+[33mcommit b3c0d3a058afbec3fdd0ad3f78e7fcba2912539c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 21:28:45 2021 -0400
+
+    created new file: API calls from Sales
+
+[33mcommit 057cf9a5d694109b2186b81cf4a8bd13be60d44e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 21:27:50 2021 -0400
+
+    created functions to: confirm a sale. and modal SWAL to make it clear that the sale went OK
+
+[33mcommit 401d24c43e2279bc25febcbe0af76d087999b817[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 20:49:27 2021 -0400
+
+    feature: if there is not enough inventory it will show a new modal SWAL warning and cart will reset
+
+[33mcommit ca9979ffc00b82a7db607d66f17e301f48fa3ff7[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 20:48:25 2021 -0400
+
+    added a new SWAL function to make it clear there was not enough inventory
+
+[33mcommit 0653bdbe21647bc96fd9534e014f76012a775e20[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Wed Jul 7 20:17:09 2021 -0400
+
+    moved formatCurrency function into total ammount inner html, so that typeof val returned from getTotalAmount remains as a number
+
+[33mcommit 9006276049aaff7e65cd4151af329ea07c99c63e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jul 5 23:47:04 2021 -0400
+
+    refactor: (SalesPanel) now it show only one item if there is already any in cart. There is a counter that sums one item every time the item repeats
+
+[33mcommit 20873d1ecf175c35f21a5e6e27cdc6e4d75544a2[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sat Jul 3 23:45:15 2021 -0400
+
+    new feature: show message on Sales Panel if there are no products on Inventory. Made a CTA to insert new products
+
+[33mcommit 002b067968d40ace0c7daac2b738741e55029f02[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sat Jul 3 23:29:46 2021 -0400
+
+    feature: if there is no data on productsList, then it'll show a message saying it instead of showing an error
+
+[33mcommit e3ed175b337a6f2ada693c1977b56120e757082e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 2 21:07:34 2021 -0400
+
+    added create, update and getProduct function
+
+[33mcommit 4396edc7b38ba46c0e47cd77db471131ecca5c0c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jul 2 21:07:10 2021 -0400
+
+    refactor: changed AddProduct to a RFC with useState and useEffect
+
+[33mcommit 28dde2bad1bfb7ab35b6ea34e7108602ec36a9cc[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 22:21:42 2021 -0400
+
+    made deleteCart() one lined
+
+[33mcommit f1d31c10545de19c9a8fc89a60c004e5b8c4afaf[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 22:19:38 2021 -0400
+
+    fixed typo
+
+[33mcommit 891b98976ed8c51591926a3260c7cae49e8f650d[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 22:19:19 2021 -0400
+
+    refactor: getTotalamount function
+
+[33mcommit a7c9ee58605610c7b181c86fab30fbde646c1718[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 22:12:42 2021 -0400
+
+    fixed some styling issues
+
+[33mcommit 9b1d2e65df42cf5b4ef1bf1aa5bb0b76ba3d9d16[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 20:05:05 2021 -0400
+
+    deleted index.css
+
+[33mcommit 05e050adf9a9780ea273c66cba59b23c76d1dab9[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 20:04:19 2021 -0400
+
+    deleted
+
+[33mcommit cbb81a3c1851811b9d7b07ee968c1bbc1480a994[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 20:03:36 2021 -0400
+
+    added border-bottom to cart title
+
+[33mcommit 736656339c0a416ae58748ed5b8cb87b55162c9e[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 19:53:35 2021 -0400
+
+    moved hooks folder to /src
+
+[33mcommit 86f095ef92081dddc723e2e82b217a160d05ac44[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 19:53:12 2021 -0400
+
+    feature: added EmptyCart component into SalesCart to make it clear that there is no items in cart.
+
+[33mcommit 91b55b99704f80ff04628bbfdfbd0e329f7e561d[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 19:06:06 2021 -0400
+
+    refactored to use a custom hookto fetchData
+
+[33mcommit 50e7f5bbaad00d4bb26f5a395b110d0da4b7bfc5[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 19:05:14 2021 -0400
+
+    refactored swal alert to make it reusable
+
+[33mcommit 8c0e216260454ce95983abff7732cc0b8e94526a[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Mon Jun 28 19:04:17 2021 -0400
+
+    added cursor pointer to btns
+
+[33mcommit 1dc475ee4a36fb0684df4e3253779081faf4950f[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 22:36:04 2021 -0400
+
+    placed both getTotalAmmount and formatCurrency into one single file: helpers.js
+
+[33mcommit 57dc0f540f433a562118dc76bf0c711c4dac47bd[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 22:23:44 2021 -0400
+
+    refactor: SearchBar
+
+[33mcommit 1747b8a339d3f76ef482c67d5a1e5bbd2bf624b8[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 22:12:47 2021 -0400
+
+    changed ext in order to keep track of refactors (classes to function)
+
+[33mcommit d769eb0da3fe63cc8c3b68f4a51f019333260b7a[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 22:10:20 2021 -0400
+
+    fixed directory link
+
+[33mcommit 8a80f292d82047294b1c5a752581641f8034a728[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 22:00:59 2021 -0400
+
+    refactor: NewProductForm
+
+[33mcommit 26e2d72038b2c3fbc93b69171d6d33d4e0e5cdde[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 21:50:32 2021 -0400
+
+    refactor: InventoryList.jsx
+
+[33mcommit b919a83b7671d285fb0efdd68eb490f266813e03[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 19:43:26 2021 -0400
+
+    refactor: SalesPanel.jsx. TODO: POST Req to execute the sale.
+
+[33mcommit 3360dfdfe6134dc8009b4ee7d3014f08f521d12b[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 27 15:12:16 2021 -0400
+
+    todo: refactorizar shopping cart
+
+[33mcommit 44303566a0b4a8e529db3a4bfdf238ba9a628db5[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jun 18 14:35:51 2021 -0400
+
+    so far: inventory list done. You can add, edit, and delete products.
+
+[33mcommit abf8b286b2ff50734e97ae540fa1ad5456945a4b[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 13 21:23:32 2021 -0400
+
+    fix
+
+[33mcommit c3e0c4a9ff4af1e480c8591f8cb3b6d0379be536[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Sun Jun 13 18:16:51 2021 -0400
+
+    so far: inventory list and form set. Todo: inventory item list buttons
+
+[33mcommit 9ef8e1109ee03b82b2216a12ac41a981a2543d4c[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Fri Jun 11 00:37:21 2021 -0400
+
+    first commit: navigation component set
+
+[33mcommit b376c7ba4e55e17f851ec673e3592248381e94f1[m
+Author: Joseph Salen <jsalen.91@gmail.com>
+Date:   Thu Jun 10 23:18:14 2021 -0400
+
+    Initialize project using Create React App
